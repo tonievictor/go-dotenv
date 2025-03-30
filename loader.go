@@ -1,3 +1,18 @@
+// Package dotenv provides functionality for loading environment variables
+// from a `.env` file and setting them as environment variables in the system.
+// It supports reading key-value pairs from a file, skipping invalid or comment lines,
+// and allows users to customize the filename and logger through options.
+//
+// Example usage:
+//
+//   envVars, err := dotenv.Config(
+//     dotenv.WithFilename(".env"), 
+//     dotenv.WithLogger(log.New(os.Stdout, "dotenv: ", log.LstdFlags)),
+//   )
+//   if err != nil {
+//     log.Fatal(err)
+//   }
+//   fmt.Println(envVars)
 package dotenv
 
 import (
